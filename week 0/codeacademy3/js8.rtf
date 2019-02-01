@@ -1,0 +1,77 @@
+{\rtf1\ansi\ansicpg1251\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 // Write your code below\
+for(let i=5;i<=10;i++)\{\
+  console.log(i);\
+\}\
+\
+\
+\
+// The loop below loops from 0 to 3. Edit it to loop backwards from 3 to 0\
+for (let counter = 3; counter >= 0; counter--)\{\
+  console.log(counter);\
+\}\
+\
+const vacationSpots = ['Bali', 'Paris', 'Tulum'];\
+\
+// Write your code below\
+for(let i=0;i<vacationSpots.length;i++)\{\
+  console.log('I would love to visit '+vacationSpots[i]);\
+\}\
+\
+// Write your code below\
+const bobsFollowers=['Bill','Dan','Sam','Paul'];\
+const tinasFollowers=['Paul','Sam','Jane'];\
+const mutualFollowers=[];\
+for(let i=0;i<bobsFollowers.length;i++)\{\
+  for(let j=0;j<tinasFollowers.length;j++)\{\
+    if(bobsFollowers[i]===tinasFollowers[j])\{\
+      mutualFollowers.push(bobsFollowers[i]);\
+    \}\
+  \}\
+\}\
+\
+\
+const cards = ['diamond', 'spade', 'heart', 'club'];\
+let currentCard;\
+while(currentCard!=='spade')\{\
+  currentCard = cards[Math.floor(Math.random() * 4)];\
+  console.log(currentCard);\
+\}\
+// Write your code below\
+\
+\
+\
+\
+// Write your code below\
+const cupsOfSugarNeeded=3;\
+let cupsAdded=0;\
+do\{\
+  if(cupsOfSugerNeeded===0)\{\
+    cupsAdded++;\
+  \}\
+\}while(cupsAdded<cupsOfSugarNeeded);\
+\
+\
+\
+\
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];\
+\
+// Write your code below\
+for(let i=0;i<rapperArray.length;i++)\{\
+  console.log(rapperArray[i]);\
+  if(i===2)\{\
+    break;\
+  \}\
+\}\
+console.log("And if you don't know, now you know.");\
+\
+\
+\
+\
+}
