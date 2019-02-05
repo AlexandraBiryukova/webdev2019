@@ -15,7 +15,6 @@ body{
     padding-bottom: 0px;
     padding-left:30px;
     padding-right: 10px;
-    padding-top:20px;
     border: 1px solid darkblue;
     display: inline-block;
     position: relative;
@@ -221,9 +220,7 @@ a:hover{
     top:170px;
     left:45px;
 }
-input:hover{
-    border: 0px;
-}
+
 .selected{
     position: relative;
 }
