@@ -19,7 +19,7 @@ b.onclick=function(){
                 t+="\n";
             }
         }
-        alert(t);
+        
         text=t.replace(/\n/g, '<br>');
     }
     s.innerHTML=text;
