@@ -59,7 +59,9 @@ html, body{
     border:1px solid lightgrey;
     padding-left: 30px;
     background: none;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.267);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.623);
+    font-family: 'Gruppo';
+    outline: none;
     }
     #btn1{
     height: 30px;
@@ -67,7 +69,8 @@ html, body{
     top:5px;
     }
     ::placeholder{
-    color:rgb(189, 185, 185);
+    color:rgb(241, 238, 238);
+    font-family:'Gruppo';
     }
     #btn1:hover{
     cursor: pointer;
@@ -159,8 +162,9 @@ html, body{
     }
     #weather{
       position: absolute;
-      top:70px;
-      left:40px;
+      top:10%;
+      right:70%;
+      overflow: hidden;
     }
     #hob{
       margin-bottom:-20px;

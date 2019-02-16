@@ -21,12 +21,14 @@ b.onclick=function(){
         return false;
     }
     console.log(text.length)
-    if(text.length>70){
+    if(text.length>60){
         var t="";
         for(var i=0;i<text.length;i++){
             t+=text[i];
-            if(i%69===0&&i!==0){
-                t+="\n";
+            if(i%59===0&&i!==0){
+                // t+="\n";
+                t+="...";
+                break;
             }
         }
         
