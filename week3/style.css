@@ -1,0 +1,187 @@
+html, body{
+    height:100%;
+  }
+  #body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin:0;
+    font-family: 'Gruppo';
+     background-image: url("https://images.unsplash.com/photo-1487715433499-93acdc0bd7c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1414&q=80"); */ */
+  }
+  .overlay{
+    width:100%;
+    height: 100%;
+    
+    display:flex;
+    
+    align-items: center;
+    white-space: nowrap;
+    flex-flow: column;
+    
+    
+  }
+  h1{
+    color:#fff;
+    font-size:180px;
+    text-shadow:0 0 30px rgb(95, 0, 204);
+    visibility: visible;
+    opacity: 0.9;
+    margin-bottom: 0px; 
+    margin-top:-10px;
+    border-radius: 20px;
+
+    
+  }
+  #h1_1{
+      margin-top:5px;
+      font-size: 70px;
+      font-family: 'Codystar';
+      font-weight: 100px;
+      text-shadow:0 0 50px rgba(46, 0, 252, 0.842);
+      background: url("https://i.gifer.com/origin/53/5366eef68903d212ba5ca6c6cb2028e5_w200.webp");
+      padding: 10px;
+      
+  }
+  #date{
+    color:white;
+    font-size: 50px;
+  }
+  
+    #inp{
+    margin-left:100px;
+    height:30px;
+    width:520px;
+    margin-right: 30px;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    border-radius: 15px;
+    border:1px solid lightgrey;
+    padding-left: 30px;
+    background: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.267);
+    }
+    #btn1{
+    height: 30px;
+    position:relative;
+    top:5px;
+    }
+    ::placeholder{
+    color:rgb(189, 185, 185);
+    }
+    #btn1:hover{
+    cursor: pointer;
+    opacity: 0.6;
+    }
+    #list{
+    width:100px;
+    }
+    #list li{
+    color:rgba(255, 255, 255, 0.726);
+    width:760px;
+    margin-left:-40px;
+    margin-top:-50px;
+    list-style: none;
+    border-radius: 15px;
+    border:1px solid lightgrey;
+    padding:10px 0px 10px 30px;
+    background: linear-gradient(to right,rgba(177, 14, 49, 0.329), rgba(116, 118, 238, 0.356));
+    font-size:20px;
+    
+    }
+    #list li input{
+    text-align: center;
+    padding-left: 100px;
+    
+    }
+    input[type=checkbox]{
+    margin-right: -15px;
+    }
+    .image{
+    width:105px;
+    float:right;
+    position: relative;
+    top:-5px;
+    
+    }
+    
+    img:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    
+    }
+    ul li span{
+    margin-left:0px;
+    position: relative;
+    left: 13%;
+    
+    }
+    h4,h3{
+        color:rgba(255, 255, 255, 0.822);
+        font-size: 20px;
+        margin-top:10px;
+        text-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+    
+    #toDo{
+        visibility: hidden;
+    }
+    #imgL{
+        margin-left:20px;
+        margin-right: 20px;
+        padding:15px 0 0 0;
+        visibility:visible;
+    }
+    #imgL2{
+      visibility: hidden;
+      padding:15px 0 0 0;
+    }
+    #c{
+      font-family:'Dancing Script', cursive;
+      font-size:20px;
+      margin-bottom: 30px;
+      
+    }
+    
+    
+    #imgL,#imgL2::hover{
+        opacity:0.5;
+
+    }
+    #date{
+      margin-bottom: 5px;
+    margin-top:80px;
+      font-size: 40px;
+    }
+    a img{
+      border-radius: 6px;
+      padding :10px;
+    }
+    #weather{
+      position: absolute;
+      top:70px;
+      left:40px;
+    }
+    #hob{
+      margin-bottom:-20px;
+    }
+    #hob img{
+      border-radius: 90px;
+      box-shadow: 0 0 20px rgba(250, 250, 250, 0.384);
+      margin-right: 20px;
+      margin-bottom: 4px;
+      
+    }
+    #hob a img:hover{
+      box-shadow: 0 0 30px rgba(50, 4, 255, 0.74);
+      
+
+    }
+    #toDoH4{
+      margin-bottom:0px;
+      
+    }
+    
+    
+    
+    
