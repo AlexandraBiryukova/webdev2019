@@ -33,14 +33,20 @@ html, body{
 
     
   }
-  #h1_1{
+  #hi{
       margin-top:5px;
-      font-size: 70px;
+      font-size: 50px;
       font-family: 'Codystar';
       font-weight: 100px;
-      text-shadow:0 0 50px rgba(46, 0, 252, 0.842);
+      text-shadow:0 0 50px rgba(255, 255, 255, 0.842);
       background: url("https://i.gifer.com/origin/53/5366eef68903d212ba5ca6c6cb2028e5_w200.webp");
       padding: 10px;
+      width:500px;
+      border-radius: 30px;
+      color:white;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.486);
+      margin-bottom:10px;
       
   }
   #date{
@@ -143,6 +149,7 @@ html, body{
       font-family:'Dancing Script', cursive;
       font-size:20px;
       margin-bottom: 30px;
+      color:white;
       
     }
     
@@ -161,10 +168,10 @@ html, body{
       padding :10px;
     }
     #weather{
-      position: absolute;
-      top:10%;
-      right:70%;
-      overflow: hidden;
+      margin-top: -10px;
+      margin-bottom:-90px;
+      
+      
     }
     #hob{
       margin-bottom:-20px;
@@ -184,6 +191,10 @@ html, body{
     #toDoH4{
       margin-bottom:0px;
       
+    }
+    #weather{
+      padding-right: 600px;
+      margin-bottom: -150px;
     }
     
     
