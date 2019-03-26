@@ -1,0 +1,30 @@
+ul{
+    width:100%;
+}
+ul li{
+    list-style: none;
+    display: inline;
+}
+ li button{
+    width:200px;
+    height: 30px;
+}
+li button:hover{
+    background-color: rgba(137, 43, 226, 0.253)
+}
+#articlesL, #speechPartsL,#sentencePartsL,#sentenceTypesL,#punctuationL{
+    visibility: hidden;
+}
+.content{
+    white-space: nowrap;
+    visibility: hidden;
+    
+}
+.list{
+    position: absolute;
+}
+.content{
+    position: absolute;
+    margin-top:80px;
+}
+
