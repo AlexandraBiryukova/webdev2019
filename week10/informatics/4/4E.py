@@ -1,10 +1,9 @@
-arr = []
-a = input()
-a = int(a)
+n = int(input())
+arr = map(int, input().split())
+arr = list(arr)
 c = False
-for i in range(0,a):
-    arr.append(int(input()))
-for i in range(1,a):
+
+for i in range(1,n):
     if arr[i]*arr[i-1] > 0:
         print("YES")
         c = True

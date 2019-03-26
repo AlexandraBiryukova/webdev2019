@@ -9,6 +9,6 @@ def power(a,n):
     return res
 
 
-a=float(input())
-n=int(input())
-print(power(a,n))
+arr = list(map(float, input().split()))
+
+print(power(arr[0], int(arr[1])))

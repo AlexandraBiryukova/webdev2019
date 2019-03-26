@@ -1,18 +1,12 @@
 def XOR(x,y):
     res=False
-    if (x==True and y==True) or(x==False and y==False):
+    if x+y!=1:
         res=True
     return res
 
 
-a=input()
-b=input()
-a=bool(a)
-b=bool(b)
-print(a)
-print(b)
-
-if XOR(a, b):
+arr = list(map(int, input().split()))
+if XOR(int(arr[0]),int(arr[1])):
     print(0)
 else:
     print(1)

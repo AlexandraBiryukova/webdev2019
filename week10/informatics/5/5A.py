@@ -1,9 +1,6 @@
 def minimum(a, b, c, d):
     return min(d,min(c, min(a,b)))
 
+arr = list(map(int, input().split()))
 
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
-print(minimum(a, b, c, d))
+print(min(arr[0], arr[1], arr[2], arr[3]))
