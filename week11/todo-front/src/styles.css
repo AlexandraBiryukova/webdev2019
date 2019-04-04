@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Gruppo';
+    background-image: url("https://images.wallpaperscraft.ru/image/shestiugolniki_forma_rendering_120754_1920x1080.jpg");
+    background-size: 100% contain;
+    background-attachment: scroll;
+    color:rgb(255, 255, 255);
+    font-weight: 900;
+    
+   
+}
+.lists li:hover{
+    background: linear-gradient(to right, #2225e65b,rgba(250, 0, 54, 0.329));
+}
+
+.lists, .tasks{
+    width:90%;
+    display: flex;
+    overflow-x: scroll;
+    text-align: center;
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+li{
+    
+    list-style: none;
+    border-radius: 15px;
+    border:1px solid lightgrey;
+    padding:10px;
+    margin: 10px;
+    font-size:25px;
+    }
+    .lists li{
+        background: linear-gradient(to right,rgba(231, 8, 56, 0.527), rgba(41, 43, 184, 0.356));
+        width:200px;
+
+    }
+    .tasks li{
+        background: linear-gradient(to right,rgba(70, 18, 192, 0.651), rgba(214, 10, 10, 0.767));
+        width:400px;
+        height: 100px;
+        overflow-y:scroll
+    }
+    li p{
+        margin: 5px;
+    }
+    h1{
+        font-size: 80px;
+        margin-bottom:7px;
+    }
