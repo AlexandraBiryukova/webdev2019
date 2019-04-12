@@ -32,5 +32,10 @@ export class MyServiceService extends ExService {
   deleteList(id:Number):Promise<any>{
     return this.delet(`http://127.0.0.1:8000/api/task_lists/${id}/`,{})
   }
+  createTask(name:any,id:Number):Promise<ITask>{
+    return this.post(`http://127.0.0.1:8000/api/task_lists/${id}/tasks/`, {
+      name:name
+    });
+  }
 
 }

@@ -16,10 +16,11 @@ export class MainComponent implements OnInit {
   public taskLists:ITaskList[]=[];
   public curList:ITaskList;
   public tasks: ITask[]=[];
-  public loading=true;
-  public creating=false;
+  
   public updated_name='';
   public name='';
+  public task_name='';
+  public newTask=false;
   constructor(private provider: MyServiceService) { }
 
   ngOnInit() {
@@ -27,9 +28,7 @@ export class MainComponent implements OnInit {
       this.taskLists=res;
     });
   }
-  createOrNot(){
-    this.creating=true;
-  }
+  
   getExList(list: ITaskList) {
     this.provider.getExactList(list.id).then(res => {
       this.curList=res;
@@ -37,14 +36,10 @@ export class MainComponent implements OnInit {
     });
   }
   getTasks(l:ITaskList){
+    this.curList=l;
+    this.newTask=true;
     this.provider.getTasks(l.id).then(res=>{
       this.tasks=res;
-      if (res.length>0){
-        this.loading=true;
-      }else{
-        this.loading=false;
-      }
-
     });
   }
   createList(){
@@ -90,19 +85,36 @@ export class MainComponent implements OnInit {
       
     }
     }
-    mouseOn(){
-      var el=document.getElementById("yes");
+    mouseOn(id:any){
+      if(id==1){
+        var el=document.getElementById("yes");
         el.setAttribute("src","../../assets/add2.png");
+      }else{
+        var el=document.getElementById("yes2");
+        el.setAttribute("src","../../assets/add2.png");
+      }
         
-      
     }
-    mouseOff(){
-      var el=document.getElementById("yes");
-        el.setAttribute("src", "../../assets/add.png");
-      
-    }
+    mouseOff(id:any){
+      if(id==1){
+        var el=document.getElementById("yes");
+        el.setAttribute("src","../../assets/add.png");
+      }else{
+        var el=document.getElementById("yes2");
+        el.setAttribute("src","../../assets/add.png");
+      }
 
   }
+  createTask(){
+    if(this.task_name!==''){
+      console.log(this.curList);
+      this.provider.createTask(this.task_name,this.curList.id).then(res=>{
+        this.task_name='';
+        this.tasks.push(res);
+      });
+    }
+  }
+}
 
   
 

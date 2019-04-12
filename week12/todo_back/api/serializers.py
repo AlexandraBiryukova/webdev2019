@@ -32,11 +32,15 @@ class TaskSerializer(serializers.Serializer):
     status=serializers.CharField(read_only=True)
     created_at=serializers.DateTimeField(read_only=True)
     due_on=serializers.DateTimeField(read_only=True)
-    # def create(self,validated_data):
-    #     li=Task(**validated_data)
-    #     li.save()
-    #     return li
-    #
+    listik=TaskList()
+
+    def create(self,validated_data):
+        li=Task(**validated_data)
+        li.task_list=TaskSerializer.listik
+        li.save()
+        print(TaskSerializer.listik)
+        return li
+
     # def update(self, instance, validated_data):
     #     instance.name=validated_data.get('name',instance.name)
     #     instance.status = validated_data.get('status', instance.status)

@@ -13,10 +13,14 @@ import json
 def lists(request):
     if request.method == 'GET':
         all_lists = TaskList.objects.all()
+        # json_lists=[l.to_json() for l in all_lists]
         ser=ListSerializer(all_lists,many=True)
         return JsonResponse(ser.data, safe=False,status=200)
     elif request.method == 'POST':
         data = json.loads(request.body)
+        # li=TaskList()
+        # li.name=data.get('name','')
+        # li.save()
         ser=ListSerializer2(data=data)
         if ser.is_valid():
             ser.save()
@@ -30,10 +34,13 @@ def task_list_detail(request,pk):
     except TaskList.DoesNotExist as e:
         return JsonResponse({'error': str(e)},safe=False)
     if request.method=='GET':
+        #json_li=li.to_json()
         ser=ListSerializer(li)
         return JsonResponse(ser.data,status=200)
     elif request.method=="PUT":
         data=json.loads(request.body)
+        # li.name=data.get('name',li.name)
+        # li.save()
         ser=ListSerializer(instance=li,data=data)
         if ser.is_valid():
             ser.save()
@@ -53,12 +60,14 @@ def list_tasks(request,pk):
         tasks = list.task_set.all()
         ser = TaskSerializer(tasks, many=True)
         return JsonResponse(ser.data, safe=False,status=200)
-    # elif request.method=="PUT":
-    #     data=json.loads(request.body)
-    #     ser=TaskSerializer(data=data)
-    #     if ser.is_valid():
-    #         ser.save()
-    #         return JsonResponse(ser.data,status=200)
-    #     return JsonResponse(ser.errors)
+    elif request.method=="POST":
+        data=json.loads(request.body)
+        print(data)
+        TaskSerializer.listik=list
+        ser=TaskSerializer(data=data)
+        if ser.is_valid():
+            ser.save()
+            return JsonResponse(ser.data,status=200)
+        return JsonResponse(ser.errors)
 
 
