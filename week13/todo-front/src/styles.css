@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Gruppo';
+    background-image: url("https://images.wallpaperscraft.ru/image/shestiugolniki_forma_rendering_120754_1920x1080.jpg");
+    background-size: 100% contain;
+    background-attachment: scroll;
+    color:rgb(255, 255, 255);
+    font-weight: 900;
+    
+   
+}
+.lists li:hover{
+    opacity: 0.8;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.lists, .tasks{
+    width:85%;
+    display: flex;
+    overflow-x: scroll;
+    text-align: center;
+    align-items: center;  
+    position: relative;
+    left: 100px;
+    top:-80px;
+    
+}
+.update{
+    background: linear-gradient(to right,rgba(231, 190, 8, 0.699), rgba(41, 43, 184, 0.568));
+    float: right;
+}
+input{
+    background: linear-gradient(to right,rgba(8, 231, 101, 0.699), rgba(41, 43, 184, 0.568));
+    width:400px;
+    border-radius: 15px;
+    border:1px solid lightgrey;
+    padding:10px;
+    margin: 10px;
+    font-size:25px;
+    box-shadow: 0px 0px 15px rgb(222, 139, 247);
+    font-family: 'Gruppo';
+    color:white;
+
+}
+::placeholder{
+    color:rgba(255, 255, 255, 0.712);
+}
+li{
+    list-style: none;
+    border-radius: 15px;
+    border:1px solid lightgrey;
+    padding:10px;
+    margin: 10px;
+    font-size:25px;
+    box-shadow: 0px 0px 15px rgb(222, 139, 247);
+    
+}
+*:focus{
+    outline: none;
+}
+.lists li{
+    background: linear-gradient(to right,rgba(231, 8, 56, 0.699), rgba(41, 43, 184, 0.568));
+    width:400px;
+}
+.tasks li{
+    background: linear-gradient(to top,rgba(8, 168, 231, 0.699), rgba(41, 43, 184, 0.575));
+    width:400px;
+    height: 130px;
+    overflow-y:scroll;
+}
+li p{
+    margin: 5px;
+    width: 400px;
+    word-wrap: break-word;
+	word-break: break-all;
+}
+h1{
+    font-size: 80px;
+    margin:0px;
+    margin-bottom: 40px;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 1000px;
+
+}
+.tasks{
+    width: 95%;
+    left: 10px;
+}
+img{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#ar2{
+    position: relative;
+    top:-213px;
+    left: 92%;
+}
+#ar1{
+    position: relative;
+    right: 1%;
+}
+.func{
+    float: right;
+    padding:0px;
+    margin-right: 5px;
+}
+.func:hover{
+    opacity: 0.6;
+}
+
