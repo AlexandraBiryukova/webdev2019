@@ -1,30 +1,40 @@
 
-<h1>Task Lists<img src="https://apprecs.org/gp/images/app-icons/300/8a/io.tinbits.memorigi.jpg" width=80px></h1>
+<div>
 <ng-container *ngIf="!logged">
-    <div style="height: 100vh;">
-        <form class="transparent">
-            <div class="form-inner">
-                <h3>Регистрация</h3>
-                <label for="username">Имя пользователя</label>
-                <input type="text" id="username" [(ngModel)]="login" [ngModelOptions]="{standalone:true}"/>
-                <label for="password">Пароль</label>
-                <input id="password" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone:true}"/>
-                <!-- <input type="checkbox" id="custom-checkbox">
-                <label for="custom-checkbox">Запомнить меня</label> -->
-                <input type="submit" value="Отправить" (click)="logIn()">
-            </div>
-            </form>
-            </div>
+    <h1>Task Lists
+        <img  id="gif" src="https://i.gifer.com/Xi5e.gif" width=200px>
+    </h1>
+            <div class="auth">
+                  <div class="regist" >
+                      Authentication 
+                      <br><br>
+                      <label style="font-family: 'Gruppo';" for="username">Username</label>
+                      
+                      <input type="text" id="username" [(ngModel)]="login" [ngModelOptions]="{standalone:true}"/>
+                      
+                      <label for="password">Password</label>
+                     
+                      <input id="password" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone:true}"/>
+                      
+                      <input id="but" type="submit" value="Log In" (click)="logIn()">
+                  </div>
+                  
+                  </div>
           
 
 </ng-container>
 <ng-container *ngIf="logged">
+    <h1>Task Lists
+        <img  id="gif" src="https://i.gifer.com/YCne.gif" width=200px>
+    </h1>
+  <br>
   <div style=" display: inline;  white-space: nowrap;">
     ADD NEW TASK LIST:
     <input type="text" [(ngModel)]="name" placeholder="Name"/>
     <img id="yes" (click)="createList()" (mouseenter)="mouseOn(1)" (mouseleave)="mouseOff(1)" src="../../assets/add.png" width="40" style="position: relative; top:10px;">
   </div>
   <br>
+  
   <br>
   <br>
   <div style="display: inline;">
@@ -53,4 +63,6 @@
   <div class="tasks">
       <div *ngFor="let t of tasks"><li><p>{{t.name}}</p><p>~{{t.status}}~</p><p>Created at: {{t.created_at}}</p><p>Due on: {{t.due_on}}</p></li></div>
   </div>
+  <button (click)="logout()">Log Out</button>
 </ng-container>
+</div>
