@@ -15,7 +15,7 @@ class TasksFromList(generics.ListCreateAPIView):
     filter_backends =(DjangoFilterBackend, SearchFilter,OrderingFilter)
     # filterset_fields=('name','status')
     filter_class=TaskFilter
-    search_fields=("name",)
+
     # pagination_class = LimitOffsetPagination
     ordering_fields=('name','id',)
     ordering=('name',)
@@ -39,7 +39,8 @@ class Lists(generics.ListCreateAPIView):
     # queryset = Category.objects.all()
     serializer_class = TaskListSerializer2
     permission_classes = (IsAuthenticated,)
-
+    filter_backends = (SearchFilter,)
+    search_fields = ("name",)
     def get_queryset(self):
         return TaskList.objects.for_user_order_by_name(self.request.user)
 
