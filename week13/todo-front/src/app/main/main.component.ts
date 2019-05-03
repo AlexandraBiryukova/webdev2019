@@ -19,11 +19,13 @@ export class MainComponent implements OnInit {
   
   public updated_name='';
   public name='';
+  public search_list='';
   public task_name='';
   public newTask=false;
+  public wantTask=false;
 
   public logged = false;
-
+  public search='';
   public login: any = '';
   public password: any = '';
   constructor(private provider: MyServiceService) { }
@@ -50,9 +52,16 @@ export class MainComponent implements OnInit {
   getTasks(l:ITaskList){
     this.curList=l;
     this.newTask=true;
+    this.wantTask=true;
     this.provider.getTasks(l.id).then(res=>{
       this.tasks=res;
     });
+  }
+  searcH(){
+    this.provider.getListByname(this.search_list).then(res=>{
+      this.taskLists=res;
+    });
+
   }
   createList(){
     if(this.name!==''){
@@ -146,6 +155,12 @@ export class MainComponent implements OnInit {
       localStorage.clear();
       this.logged = false;
     });
+  }
+  filter(){
+    this.provider.getTasksByName(this.curList.id,this.search).then(r=>{
+      this.tasks=r;
+    });
+
   }
   
 }

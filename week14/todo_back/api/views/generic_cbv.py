@@ -14,6 +14,7 @@ class TasksFromList(generics.ListCreateAPIView):
     serializer_class = TaskSerializer
     filter_backends =(DjangoFilterBackend, SearchFilter,OrderingFilter)
     # filterset_fields=('name','status')
+    #week14
     filter_class=TaskFilter
 
     # pagination_class = LimitOffsetPagination
@@ -39,6 +40,7 @@ class Lists(generics.ListCreateAPIView):
     # queryset = Category.objects.all()
     serializer_class = TaskListSerializer2
     permission_classes = (IsAuthenticated,)
+    # week14
     filter_backends = (SearchFilter,)
     search_fields = ("name",)
     def get_queryset(self):

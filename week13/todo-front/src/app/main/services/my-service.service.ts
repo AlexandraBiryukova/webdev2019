@@ -19,6 +19,14 @@ export class MyServiceService extends ExService {
    getTasks(id: number): Promise<ITask[]> {
     return this.get(`http://127.0.0.1:8000/api/task_lists/${id}/tasks/`, {id});
   }
+  // filters
+  getTasksByName(id: number,name:string): Promise<ITask[]> {
+    return this.get(`http://127.0.0.1:8000/api/task_lists/${id}/tasks/?name=${name}/`, {id,name});
+  }
+  //search
+  getListByname(name:string): Promise<ITask[]> {
+    return this.get(`http://127.0.0.1:8000/api/task_lists/?search=${name}`, {name});
+  }
   createList(name:any):Promise<ITaskList>{
     return this.post(`http://127.0.0.1:8000/api/task_lists/`, {
       name: name
@@ -32,9 +40,10 @@ export class MyServiceService extends ExService {
   deleteList(id:Number):Promise<any>{
     return this.delet(`http://127.0.0.1:8000/api/task_lists/${id}/`,{})
   }
-  createTask(name:any,id:Number):Promise<ITask>{
+  createTask(name:any,id:number):Promise<ITask>{
     return this.post(`http://127.0.0.1:8000/api/task_lists/${id}/tasks/`, {
-      name:name
+      name:name,
+      task_list_id:id
     });
   }
   logIn(login: any, password: any): Promise<IAuthResponse> {
